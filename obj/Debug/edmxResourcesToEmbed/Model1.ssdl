@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoviesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Movies_table">
+    <Key>
+      <PropertyRef Name="Movie_id" />
+    </Key>
+    <Property Name="Movie_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Movie_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Production_Year" Type="int" Nullable="false" />
+    <Property Name="Director_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Movie_duration_in_hours" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="pass" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="confirm_pass" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MoviesModelStoreContainer">
+    <EntitySet Name="Movies_table" EntityType="Self.Movies_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
