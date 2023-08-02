@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+        <style>
+        .bg-brown {
+            background-color: #964B00;
+        }
+                .funky-text {
+            font-family: 'Abril Fatface', cursive;
+        }
+    </style>
+    <title></title>
+    <link rel="stylesheet" href="bootstrap/bootstrap/bootstrap.min.css">
+    <script src="bootstrap/bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-brown navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1 funky-text">Cinezza</a>
+    </div>
+</nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+<footer class="dark-footer">
+  <div class="footer-content">
+  </div>
+</footer>
+</body>
+</html>
